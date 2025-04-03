@@ -7,19 +7,26 @@ import Writing from './Writing';
 
 const Find = () => {
   const [activePage, setActivePage] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  
   const assignActivePage = (getValue) =>{
       setActivePage(getValue)
   }
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  }
+
   const renderPages = () =>{
     switch (activePage) {
       case 'Web developement':
-      return <Web />
+      return <Web searchQuery={searchQuery} />
       case 'Graphic Designing':
-      return <Graphic /> 
+      return <Graphic searchQuery={searchQuery} /> 
       case 'Writing':
-      return <Writing />
+      return <Writing searchQuery={searchQuery} />
       default:
-        return <Web />
+        return <Web searchQuery={searchQuery} />
     }
   }
   
@@ -30,7 +37,13 @@ const Find = () => {
             <p className='font-bold text-xl text-green-600'>Find Your Desired Job</p>
         </div>
         <div className='bg-[#818181]/10 h-10 flex items-center p-4 w-[80vw] rounded-md'>
-            <input type="text" name="" id="" placeholder='search jobs here..' className='outline-none w-[80vw]'/>
+            <input 
+              type="text" 
+              placeholder='search jobs here..' 
+              className='outline-none w-[80vw]'
+              value={searchQuery}
+              onChange={handleSearch}
+            />
             <CiSearch />
         </div>
       <div className='flex flex-col'>

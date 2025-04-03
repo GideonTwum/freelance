@@ -1,14 +1,16 @@
 import React from 'react'
 
-const Jobs = ({jobTitle, desc, bookmark, stack}) => {
+const Jobs = ({jobTitle, desc, bookmark, stack, budget, deadline}) => {
   return (
     <div className="bg-white rounded-lg flex flex-col justify-between shadow-md h-70 p-4 w-70 mt-4 mb-4 hover:shadow-lg transition-shadow">
         <div className="flex justify-between items-start">
             <div className="flex-1">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">{jobTitle}</h2>
-                <p className="text-gray-600 text-sm">{desc}</p>
-                <div>
-                  <p className='text-green-800 text-sm '>{stack}</p>
+                <p className="text-gray-600 text-sm mb-2">{desc}</p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">{stack}</span>
+                    <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm">Budget: ${budget}</span>
+                    <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-sm">Deadline: {deadline}</span>
                 </div>
             </div>
             <div className="ml-4">
@@ -17,7 +19,7 @@ const Jobs = ({jobTitle, desc, bookmark, stack}) => {
                 </button>
             </div>
         </div>
-        <div>
+        <div className="mt-4">
           <button className='bg-green-300 text-sm h-10 w-30 cursor-pointer hover:bg-green-500 rounded-md'>Apply</button>
         </div>
     </div>

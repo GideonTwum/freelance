@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Input, Table } from 'antd';
 
-const CreatedJobs = () => {
+const PostJobs = () => {
   const [jobs, setJobs] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form] = Form.useForm();
@@ -29,6 +29,17 @@ const CreatedJobs = () => {
       key: 'location',
     },
     {
+      title: 'Budget',
+      dataIndex: 'budget',
+      key: 'budget',
+      render: (budget) => `$${budget}`,
+    },
+    {
+      title: 'Deadline',
+      dataIndex: 'deadline',
+      key: 'deadline',
+    },
+    {
       title: 'Description',
       dataIndex: 'description',
       key: 'description',
@@ -37,13 +48,16 @@ const CreatedJobs = () => {
 
   return (
     <div className="p-4">
-      <Button 
-        type="primary" 
-        onClick={() => setIsModalOpen(true)}
-        className="mb-4"
-      >
-        Add New Job
-      </Button>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold text-gray-800">Post Jobs</h1>
+        <Button 
+          type="primary" 
+          onClick={() => setIsModalOpen(true)}
+          className="bg-green-600 hover:bg-green-700"
+        >
+          Add New Job
+        </Button>
+      </div>
 
       <Modal
         title="Add New Job"
@@ -81,6 +95,25 @@ const CreatedJobs = () => {
           </Form.Item>
 
           <Form.Item
+            name="budget"
+            label="Budget (USD)"
+            rules={[
+              { required: true, message: 'Please input the budget!' },
+              { type: 'number', min: 0, message: 'Budget must be a positive number!' }
+            ]}
+          >
+            <Input type="number" prefix="$" />
+          </Form.Item>
+
+          <Form.Item
+            name="deadline"
+            label="Deadline"
+            rules={[{ required: true, message: 'Please input the deadline!' }]}
+          >
+            <Input type="date" />
+          </Form.Item>
+
+          <Form.Item
             name="description"
             label="Description"
             rules={[{ required: true, message: 'Please input the job description!' }]}
@@ -93,7 +126,7 @@ const CreatedJobs = () => {
               <Button onClick={() => setIsModalOpen(false)}>
                 Cancel
               </Button>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" className="bg-green-600 hover:bg-green-700">
                 Save
               </Button>
             </div>
@@ -106,9 +139,10 @@ const CreatedJobs = () => {
         dataSource={jobs} 
         rowKey="id"
         pagination={{ pageSize: 10 }}
+        className="bg-white rounded-lg shadow"
       />
     </div>
   );
 };
 
-export default CreatedJobs;
+export default PostJobs;

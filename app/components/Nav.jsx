@@ -15,7 +15,7 @@ const Nav = () => {
 
         <div className='flex items-center gap-15'>
             <a href="">Home</a>
-            <a href="#Why">Why Us?</a>
+            {/* <a href="#Why">Why Us?</a> */}
             <a href="#Find">Find Work</a>
             <a href="">contact</a>
         </div>

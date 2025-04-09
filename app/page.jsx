@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen home">
       <Nav />
       <Splash />
-      <Why />
+      {/* <Why /> */}
       <Find />
 
     </div>

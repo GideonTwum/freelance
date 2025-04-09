@@ -31,12 +31,12 @@ const Find = () => {
   }
   
   return (
-    <div className=' p-30 h-100 flex flex-col ' id='Find'>
+    <div className=' p-30 h-100 flex flex-col  ' id='Find'>
     
         <div>
             <p className='font-bold text-xl text-green-600'>Find Your Desired Job</p>
         </div>
-        <div className='bg-[#818181]/10 h-10 flex items-center p-4 w-[80vw] rounded-md'>
+        <div className='bg-[#818181]/10 h-10  flex items-center p-4 w-[60vw] lg:w-[80vw] rounded-md'>
             <input 
               type="text" 
               placeholder='search jobs here..' 
@@ -47,20 +47,29 @@ const Find = () => {
             <CiSearch />
         </div>
       <div className='flex flex-col'>
-      <div className='mt-10  flex items-center justify-center gap-10'> 
-            <div onClick={()=>assignActivePage('Web developement')} className='bg-green-400 w-40 p-2 rounded-lg cursor-pointer'>
-              <p className='text-center'>Web Development</p>
+      <div className='mt-10  flex flex-wrap items-center justify-center gap-10'> 
+            <div 
+              onClick={()=>assignActivePage('Web developement')} 
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Web developement' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+            >
+              <p className='text-center text-sm sm:text-base'>Web Development</p>
             </div>
-            <div onClick={()=>setActivePage('Graphic Designing')}  className='bg-green-400 w-40 p-2 rounded-lg cursor-pointer'>
-              <p className='text-center'>Graphic Designing</p>
+            <div 
+              onClick={()=>setActivePage('Graphic Designing')}  
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Graphic Designing' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+            >
+              <p className='text-center text-sm sm:text-base'>Graphic Designing</p>
             </div>
-            <div onClick={()=>setActivePage('Writing')}  className='bg-green-400 w-40 p-2 rounded-lg cursor-pointer'>
-              <p className='text-center'>Writing</p>
+            <div 
+              onClick={()=>setActivePage('Writing')}  
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Writing' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+            >
+              <p className='text-center text-sm sm:text-base'>Writing</p>
             </div>
         </div>
 
         {/* Rendered Pages */}
-        <div>
+        <div className='w-[80vw] lg:w-[80vw] items-center justify-center '>
               {renderPages()}
         </div>
       </div>

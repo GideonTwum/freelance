@@ -1,8 +1,26 @@
 import React from 'react'
+import { useRouter } from 'next/navigation'
 
-const Jobs = ({jobTitle, desc, bookmark, stack, budget, deadline}) => {
+const Jobs = ({jobTitle, desc, bookmark, stack, budget, deadline, company, location}) => {
+  const router = useRouter()
+
+  const handleApply = () => {
+    // Construct the URL with job details as query parameters
+    const queryParams = new URLSearchParams({
+      title: jobTitle,
+      description: desc,
+      stack: stack,
+      budget: budget,
+      deadline: deadline,
+      company: company || 'Not specified',
+      location: location || 'Remote'
+    }).toString()
+
+    router.push(`/jobDetails?${queryParams}`)
+  }
+
   return (
-    <div className="bg-white rounded-lg flex flex-col justify-between shadow-md h-70 p-4 w-70 mt-4 mb-4 hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg flex flex-col justify-between shadow-md h-90 p-4 w-70 mt-4 mb-4 hover:shadow-lg transition-shadow">
         <div className="flex justify-between items-start">
             <div className="flex-1">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">{jobTitle}</h2>
@@ -20,7 +38,12 @@ const Jobs = ({jobTitle, desc, bookmark, stack, budget, deadline}) => {
             </div>
         </div>
         <div className="mt-4">
-          <button className='bg-green-300 text-sm h-10 w-30 cursor-pointer hover:bg-green-500 rounded-md'>Apply</button>
+          <button 
+            onClick={handleApply}
+            className='bg-green-300 text-sm h-10 w-30 cursor-pointer hover:bg-green-500 rounded-md'
+          >
+            Apply
+          </button>
         </div>
     </div>
   )

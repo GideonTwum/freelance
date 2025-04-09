@@ -31,7 +31,7 @@ const Find = () => {
   }
   
   return (
-    <div className=' p-30 h-100 flex flex-col  ' id='Find'>
+    <div className=' p-30 h-screen flex flex-col  ' id='Find'>
     
         <div>
             <p className='font-bold text-xl text-green-600'>Find Your Desired Job</p>
@@ -69,7 +69,7 @@ const Find = () => {
         </div>
 
         {/* Rendered Pages */}
-        <div className='w-[80vw] lg:w-[80vw] items-center justify-center '>
+        <div className='w-[80vw] items-center justify-center '>
               {renderPages()}
         </div>
       </div>

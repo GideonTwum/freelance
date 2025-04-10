@@ -34,9 +34,9 @@ const Find = () => {
     <div className=' p-30 h-screen flex flex-col  ' id='Find'>
     
         <div>
-            <p className='font-bold text-xl text-green-600'>Find Your Desired Job</p>
+            <p className='font-bold text-xl text-blue-600'>Find Your Desired Job</p>
         </div>
-        <div className='bg-[#818181]/10 h-10  flex items-center p-4 w-[60vw] lg:w-[80vw] rounded-md'>
+        <div className='bg-transparent ring-1 ring-gray-300 h-10  flex items-center p-4 w-[60vw] lg:w-[80vw] rounded-md'>
             <input 
               type="text" 
               placeholder='search jobs here..' 
@@ -50,19 +50,19 @@ const Find = () => {
       <div className='mt-10  flex flex-wrap items-center justify-center gap-10'> 
             <div 
               onClick={()=>assignActivePage('Web developement')} 
-              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Web developement' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Web developement' ? 'bg-blue-700 text-white' : 'bg-blue-400  '}`}
             >
               <p className='text-center text-sm sm:text-base'>Web Development</p>
             </div>
             <div 
               onClick={()=>setActivePage('Graphic Designing')}  
-              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Graphic Designing' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Graphic Designing' ? 'bg-blue-700 text-white' : 'bg-blue-400  '}`}
             >
               <p className='text-center text-sm sm:text-base'>Graphic Designing</p>
             </div>
             <div 
               onClick={()=>setActivePage('Writing')}  
-              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Writing' ? 'bg-green-700 text-white' : 'bg-green-400  '}`}
+              className={`w-40 p-2 rounded-lg cursor-pointer ${activePage === 'Writing' ? 'bg-blue-700 text-white' : 'bg-blue-400  '}`}
             >
               <p className='text-center text-sm sm:text-base'>Writing</p>
             </div>

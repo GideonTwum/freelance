@@ -41,7 +41,7 @@ const Jobs = ({jobTitle, desc, bookmark, stack, budget, deadline, company, locat
         <div className="mt-4">
           <button 
             onClick={handleApply}
-            className='bg-green-300 text-sm h-10 w-30 cursor-pointer hover:bg-green-500 rounded-md'
+            className='bg-blue-300 text-sm h-10 w-30 cursor-pointer hover:bg-blue-500 rounded-md'
           >
             Apply
           </button>

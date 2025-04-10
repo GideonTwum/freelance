@@ -45,46 +45,7 @@ const Graphic = () => {
             location='Remote'
             bookmark={<CiBookmark />}
         />
-        <Jobs 
-            jobTitle='UI/UX Design'
-            desc='Modern interface designs for web/mobile'
-            stack='Figma, Sketch, Adobe XD'
-            budget='1000'
-            deadline='2024-04-30'
-            company='InterfacePro'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Business Cards'
-            desc='Professional business card designs'
-            stack='Illustrator, InDesign'
-            budget='400'
-            deadline='2024-04-12'
-            company='CardDesigns'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Package Design'
-            desc='Creative product packaging solutions'
-            stack='Illustrator, Photoshop, Dimension'
-            budget='900'
-            deadline='2024-04-22'
-            company='PackDesign'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Motion Graphics'
-            desc='Animated graphics for digital media'
-            stack='After Effects, Premiere Pro'
-            budget='1200'
-            deadline='2024-05-01'
-            company='MotionPro'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
+       
     </div>
   )
 }

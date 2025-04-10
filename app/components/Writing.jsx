@@ -4,7 +4,8 @@ import Jobs from './Jobs';
 
 const Writing = () => {
   return (
-    <div className='h-auto grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-20'>
+    <div className=''>
+      <div className='h-auto grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-20'>
         <Jobs 
             jobTitle='Content Writing'
             desc='Create engaging blog posts, articles, and web content for various industries. Strong SEO knowledge required.'
@@ -45,46 +46,8 @@ const Writing = () => {
             location='Remote'
             bookmark={<CiBookmark />}
         />
-        <Jobs 
-            jobTitle='Social Media Writing'
-            desc='Create engaging social media content and develop content strategies across platforms.'
-            stack='Hootsuite, Buffer, Sprout Social'
-            budget='450'
-            deadline='2024-04-30'
-            company='SocialWords'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Grant Writing'
-            desc='Research and write grant proposals for non-profits and organizations seeking funding.'
-            stack='Microsoft Office, Grant Management Software'
-            budget='800'
-            deadline='2024-04-12'
-            company='GrantPro'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Medical Writing'
-            desc='Develop scientific content for healthcare publications and clinical documentation.'
-            stack='PubMed, Medical Databases, LaTeX'
-            budget='700'
-            deadline='2024-04-22'
-            company='MedWrite'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
-        <Jobs 
-            jobTitle='Script Writing'
-            desc='Write engaging scripts for videos, podcasts, and other digital media content.'
-            stack='Final Draft, Celtx, Adobe Story'
-            budget='650'
-            deadline='2024-05-01'
-            company='ScriptCraft'
-            location='Remote'
-            bookmark={<CiBookmark />}
-        />
+
+      </div>
     </div>
   )
 }

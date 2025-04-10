@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .image{
-  background: linear-gradient(to right, rgba(26, 187, 61, 0.9), rgba(26, 187, 61, 0)), url('/images/freelancer.jpg');
+  background: linear-gradient(to top, rgba(5, 11, 53, 0.9), rgba(26, 187, 61, 0)), url('/images/freelancer.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -39,42 +39,6 @@ const Web = ({ searchQuery }) => {
       deadline: '2024-04-20',
       company: 'MobileFirst',
       location: 'San Francisco'
-    },
-    {
-      jobTitle: 'Web Performance Engineer',
-      desc: 'Optimizing web applications for maximum performance',
-      stack: 'React.js, Webpack, Performance Tools',
-      budget: '5200',
-      deadline: '2024-04-10',
-      company: 'SpeedTech',
-      location: 'Remote'
-    },
-    {
-      jobTitle: 'Frontend Architect',
-      desc: 'Designing scalable frontend architecture and best practices',
-      stack: 'React.js, TypeScript, Design Systems',
-      budget: '7000',
-      deadline: '2024-05-01',
-      company: 'ArchTech',
-      location: 'Boston'
-    },
-    {
-      jobTitle: 'JavaScript Developer',
-      desc: 'Developing interactive web applications',
-      stack: 'JavaScript, HTML5, CSS3',
-      budget: '4500',
-      deadline: '2024-04-25',
-      company: 'CodeCraft',
-      location: 'Remote'
-    },
-    {
-      jobTitle: 'Frontend Team Lead',
-      desc: 'Leading frontend development team and projects',
-      stack: 'React.js, Next.js, Team Management',
-      budget: '8000',
-      deadline: '2024-05-15',
-      company: 'LeadDev',
-      location: 'Chicago'
     }
   ];
 
@@ -88,7 +52,8 @@ const Web = ({ searchQuery }) => {
   });
 
   return (
-    <div className='h-auto grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-20'>
+    <div className=''>
+      <div className='h-auto grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-20 p-4'>
         {filteredJobs.map((job, index) => (
           <Jobs 
             key={index}
@@ -102,6 +67,7 @@ const Web = ({ searchQuery }) => {
             bookmark={<CiBookmark />}
           />
         ))}
+      </div>
     </div>
   )
 }

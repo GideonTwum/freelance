@@ -40,13 +40,16 @@ const SignupPage = () => {
     }
 
     try {
-      // Here you would typically make an API call to register the user
-      // For now, we'll just simulate a successful registration
-      console.log('Form submitted:', formData)
+      // Store user data in localStorage
+      localStorage.setItem('userData', JSON.stringify({
+        fullName: formData.fullName,
+        email: formData.email,
+        accountType: accountType
+      }))
 
       // Route based on account type
       if (accountType === 'freelancer') {
-        router.push('/freelancer')
+        router.push('/')
       } else {
         router.push('/employer')
       }

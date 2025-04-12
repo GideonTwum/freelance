@@ -12,7 +12,7 @@ const Splash = () => {
         <p className='text-center leading-tight text-white'>Your go to platform for hiring trusted freelancers  or finding quality gigs- fast, easy and secure</p>
       </div>
       <div>
-        <button className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-green-600 transition-all duration-300'>Explore Jobs</button>
+        <button className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition-all duration-300'>Explore Jobs</button>
       </div>
 
     </div>

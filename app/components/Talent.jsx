@@ -13,7 +13,7 @@ const Talent = () => {
       skills: ['React', 'Node.js', 'MongoDB'],
       rating: 4.8,
       projects: 25,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXN8ZW58MHx8MHx8fDA%3D'
+      image: '/images/freelancer.jpg'
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Talent = () => {
       skills: ['Figma', 'Adobe XD', 'Photoshop'],
       rating: 4.9,
       projects: 18,
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZXN8ZW58MHx8MHx8fDA%3D'
+      image: '/images/freelancer.jpg'
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Talent = () => {
       skills: ['React Native', 'Flutter', 'Swift'],
       rating: 4.7,
       projects: 32,
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhY2VzfGVufDB8fDB8fHww'
+      image: '/images/freelancer.jpg'
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const Talent = () => {
       skills: ['React', 'Node.js', 'MongoDB'],
       rating: 4.8,
       projects: 25,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXN8ZW58MHx8MHx8fDA%3D'
+      image: '/images/freelancer.jpg'
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ const Talent = () => {
       skills: ['React', 'Node.js', 'MongoDB'],
       rating: 4.8,
       projects: 25,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXN8ZW58MHx8MHx8fDA%3D'
+      image: '/images/freelancer.jpg'
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const Talent = () => {
       skills: ['React', 'Node.js', 'MongoDB'],
       rating: 4.8,
       projects: 25,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXN8ZW58MHx8MHx8fDA%3D'
+      image: '/images/freelancer.jpg'
     }   
   ]
 
